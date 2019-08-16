@@ -1,15 +1,15 @@
 class DoAddition
 {
-    public int add(int num1, int num2)
+    public void add(int num1, int num2)
     {
         int sum = num1 + num2;
-        return sum;
+        System.out.println(num1 + " + " + num2 + " = " + sum);
     }
 
-    public String add(String word1, String word2)
+    public void add(String word1, String word2)
     {
         String concat = word1 + word2;
-        return concat;
+        System.out.println(word1 + " + " + word2 + " = " + concat);
     }
 }
 
@@ -18,7 +18,7 @@ public class PolymorphismDemo extends DoAddition
     public static void main(String[] args)
     {
         DoAddition adding = new DoAddition();
-        System.out.println("8 + 7 = " + adding.add(8, 7));
-        System.out.println("Base + ball = " + adding.add("Base", "ball"));
+        adding.add(8, 7);
+        adding.add("Base", "ball");
     }
 }
